@@ -2,10 +2,10 @@ const express = require("express")
 
 const router = express.Router({});
 router.get('/', async (_req, res, _next) => {
-    // optional: add further things to check (e.g. connecting to dababase)
+
     const healthcheck = {
         uptime: process.uptime(),
-        message: 'OK',
+        message: 'Ok',
         timestamp: Date.now()
     };
     try {
@@ -14,6 +14,6 @@ router.get('/', async (_req, res, _next) => {
         healthcheck.message = e;
         res.status(503).send();
     }
-});
-// export router with all routes included
-module.exports = router;
+    });
+
+    module.exports = router;
