@@ -22,6 +22,11 @@ app.get("/allBookings", (req, res) => {
 });
 
 
+
 app.listen(PORT, () => {
   console.log(`STARTED LISTENING ON PORT ${PORT}`);
 });
+
+
+
+//detta är min webbserver
